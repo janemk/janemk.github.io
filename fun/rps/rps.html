@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors 20210906</title>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    text-align: center;
+    background-color: #0c9d0e;
+    background-image: linear-gradient(#289d5f 0%, #79c20f 74%);
+    height: 100vh;
+    font-family: 'Carter One', cursive;
+    color: yellow;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-shadow: 2px 2px 0 #c59914ef, 1px 0px 2px #000, 0px 2px 0px #fcc314, 2px 2px 1px #865c51;
+  }
+
+  #container {
+    margin: auto;
+    width: 408px;
+    text-align: center;
+  }
+
+  button {
+    margin: auto;
+    width: 136px;
+    height: 128px;
+    border: none;
+    background: none;
+  }
+
+  #rock {
+    background: url("hear_0.png") no-repeat;
+  }
+</style>
+<body>
+  <script>
+    var playerScore = 0;
+    var computerScore = 0;
+    const rpsSelection = ["rock", "paper", "scissors"]
+
+    const container = document.createElement('div');
+    container.setAttribute('id', 'container');
+    document.body.appendChild(container);
+
+ for (var i = 0; i < rpsSelection.length; i++) {
+    const rpsChoice = document.createElement('button');
+    rpsChoice.setAttribute("id",`${rpsSelection[i]}`);
+    rpsChoice.style.backgroundImage = `url("${choiceBG(i)}")`;
+    rpsChoice.title = hoverChoice(i);
+    container.appendChild(rpsChoice);
+ }
+
+const scoreContainer = document.createElement('div');
+scoreContainer.setAttribute('id', 'scores');
+const paragraph = document.createElement('p');
+paragraph.textContent = `Player Score: ${playerScore}, Computer Score: ${computerScore}`;
+document.body.appendChild(scoreContainer);
+scoreContainer.appendChild(paragraph);
+
+const roundOutcome = document.createElement('p');
+roundOutcome.textContent = 'Deaf = Rock, Mute = Paper, Blind = Scissors';
+document.body.prepend(roundOutcome);
+
+    function computerPlay() {
+      return rpsSelection[Math.floor(Math.random() * rpsSelection.length)];
+    }
+
+    function playRound(playerSelection, computerSelection) {
+      if (playerSelection == rpsSelection[0] && computerSelection == rpsSelection[2]) {
+        playerScore++;
+        roundOutcome.textContent = "+1: " + rpsSelection[0] + " > " + rpsSelection[2];
+      } else if (playerSelection == rpsSelection[1] && computerSelection == rpsSelection[0]) {
+        playerScore++;
+        roundOutcome.textContent = "+1: " + rpsSelection[1] + " > " + rpsSelection[0];
+      } else if (playerSelection == rpsSelection[2] && computerSelection == rpsSelection[1]) {
+        playerScore++;
+        roundOutcome.textContent = "+1: " + rpsSelection[2] + " > " + rpsSelection[1];
+      } else if (computerSelection == rpsSelection[1] && playerSelection == rpsSelection[0]) {
+        computerScore++;
+        roundOutcome.textContent = "Loss: " + rpsSelection[0] + " < " + rpsSelection[1];
+      } else if (computerSelection == rpsSelection[2] && playerSelection == rpsSelection[1]) {
+        computerScore++;
+        roundOutcome.textContent = "Loss: " + rpsSelection[1] + " < " + rpsSelection[2];
+      } else if (computerSelection == rpsSelection[0] && playerSelection == rpsSelection[2]) {
+        computerScore++;
+        roundOutcome.textContent = "Loss: " + rpsSelection[2] + " < " + rpsSelection[0];
+      } else if (playerSelection == computerSelection) {
+        roundOutcome.textContent = "Tie.";
+      }
+    }
+
+    function choiceBG(i) {
+      if (i === 0) {
+        return "hear_0.png";
+      }
+      if (i === 1) {
+        return "speak_1.png";
+      }
+      if (i === 2) {
+        return "see_2.png";
+      }
+    }
+
+    function hoverChoice(i) {
+      if (i === 0) {
+        return "Rock";
+      }
+      if (i === 1) {
+        return "Paper";
+      }
+      if (i === 2) {
+        return "Scissors";
+      }
+    }
+
+    const winner = document.createElement('p');
+    scoreContainer.appendChild(winner);
+
+    function declareWinner() {
+      if (playerScore === 5) {
+        winner.textContent = "You win!";
+      }
+      if (computerScore === 5) {
+        winner.textContent = "You lose!";
+      }
+    }
+
+    function game() {
+      roundOutcome.textContent = '';
+      if (playerScore === 0 || computerScore === 0) {
+        winner.textContent = '';
+      }
+      const computerSelection = computerPlay();
+      const playerSelection = this.id;
+      playRound(playerSelection, computerSelection);
+      paragraph.textContent = `Player Score: ${playerScore}, Computer Score: ${computerScore}`;
+      if (playerScore === 5 || computerScore === 5) {
+        declareWinner();
+        playerScore = 0;
+        computerScore = 0;
+      }
+    }
+
+    const choices = document.querySelectorAll('button');
+    choices.forEach(choice => choice.addEventListener('click', game));
+  
+  </script>
+</body>
+</html>
