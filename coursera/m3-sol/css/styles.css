@@ -1,5 +1,6 @@
 body {
     background-color: white;
+    width: 100%;
 }
 
 .navbar {
@@ -56,16 +57,25 @@ h1 {
     margin-bottom: 1em;
 }
 
+
+.row section {
+    padding: 1px 25px;
+    background-color: #DDF5C2;
+    color: #FF8860;
+    margin: 0 auto;
+    width: 95%;
+}
+
 @media (min-width: 767.98px) {
     #collapsed-navbar {
         display: none !important; 
     }
 }
 
-.row section {
-    padding: 0px 25px;
-    background-color: #DDF5C2;
-    color: #FF8860;
+@media (max-width: 767.98px) {
+    .row section {
+        width: 70%;
+    }
 }
 
 h2 {
