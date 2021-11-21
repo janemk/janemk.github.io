@@ -1,0 +1,5 @@
+.nav3 {
+    text-decoration: underline;
+    text-decoration-thickness: .25em;
+    text-decoration-color: var(--clr-accent-2);
+}
