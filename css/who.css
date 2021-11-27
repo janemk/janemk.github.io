@@ -3,3 +3,32 @@
     text-decoration-thickness: .25em;
     text-decoration-color: var(--clr-accent-2);
 }
+
+.jk {
+    grid-template-columns: 1fr;
+}
+
+.jk-contact {
+    display: flex;
+    order: 2;
+}
+
+.jk-contact a:nth-child(2) {
+    padding: 0 50px;
+}
+
+.jk-hi {
+    padding: 0 18%;
+}
+
+@media (min-height: 480px) {
+    .jk {
+        height: calc(100vh - 100px - 30px);
+    }
+}
+
+@media (max-width: 650px) {
+    .jk-contact a:nth-child(2) {
+        padding: 0 20px;
+    }
+}

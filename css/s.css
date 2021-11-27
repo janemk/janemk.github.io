@@ -17,7 +17,7 @@
     --fs-h1: 1.1rem;
     --fs-h2: 1rem;
     --fs-body: .9rem;
-    --fs-logo: 2.5rem;
+    --fs-logo: 2rem;
     /* font weight */
     --fw-reg: 400;
     --fw-bold: 900;
@@ -28,7 +28,7 @@
       --fs-h1: 1.4rem;
       --fs-h2: 1.2rem;
       --fs-body: 1rem;
-      --fs-logo: 2.8rem;
+      --fs-logo: 2.5rem;
   }
 }
 
@@ -119,7 +119,6 @@ nav li {
 }
   
 .project {
-  height: 400px;
   flex: 1;
   min-width: 25%;
 }
