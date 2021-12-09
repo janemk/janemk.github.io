@@ -6,29 +6,24 @@
 
 .jk {
     grid-template-columns: 1fr;
+    padding: 40px 0;
+    height: 480px;
 }
 
 .jk-contact {
-    display: flex;
-    order: 2;
+    display: grid;
 }
 
 .jk-contact a:nth-child(2) {
-    padding: 0 50px;
+    padding: 0 40px;
 }
 
 .jk-hi {
     padding: 0 18%;
 }
 
-@media (min-height: 480px) {
+@media (min-height: 600px) {
     .jk {
-        height: calc(100vh - 100px - 30px);
-    }
-}
-
-@media (max-width: 650px) {
-    .jk-contact a:nth-child(2) {
-        padding: 0 20px;
+        height: calc(100vh - 100px - 10px);
     }
 }
