@@ -23,15 +23,6 @@
     --fw-bold: 900;
 }
 
-@media (min-width: 800px) {
-  :root {
-      --fs-h1: 1.4rem;
-      --fs-h2: 1.2rem;
-      --fs-body: 1rem;
-      --fs-logo: 2.5rem;
-  }
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -64,8 +55,8 @@ a:hover {
 
 /* Nav */
 header {
-  padding: 2.5em;
-  height: 100px;
+  padding: 2em;
+  height: 80px;
 }
 
 nav {
@@ -109,30 +100,29 @@ nav li {
 
 /* Portfolio */
 #portfolio h2 {
-  padding: 200px 0px;
+  padding: 50% 0px;
+  /* padding-top: 50%; */
   text-align: center;
   color: var(--clr-dark);
 }
+
 #portfolio {
   display: flex;
   flex-wrap: wrap;
+  height: calc(100vh - 460px);
+  min-height: 400px;
 }
   
 .project {
   flex: 1;
-  min-width: 25%;
-}
-  
-@media (max-width: 900px) {
-  .project {
-    min-width: 33.33%; 
-  }
+  min-width: 33.33%;
+  height: 100%;
 }
 
 @media (max-width: 800px) {
   .project {
     min-width: 50%;
-    height: 250px;
+    height: 50%;
   }
   #portfolio h2 {
     padding: 120px 0px;
@@ -199,6 +189,33 @@ div.project:last-child{
     margin: auto;
 }
 
+ /* Contact RESPONSIVE */
+@media (max-width: 600px) {
+  .jk {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+    height: 480px;
+  }
+
+  .jk-contact {
+    display: grid;
+  }
+
+  .jk-contact a {
+    display: block;
+    text-align: center;
+  }
+
+  .jk-contact a:nth-child(2) {
+      padding: 20px 0;
+  }
+
+  .jk-hi {
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
 
 footer {
     text-align: center;
@@ -206,4 +223,10 @@ footer {
     color: lightgray;
     padding-top: 5px;
     bottom: 0;
+}
+
+@media (max-width: 400px) {
+  nav li {
+    padding: 0 20px;
+  }
 }
