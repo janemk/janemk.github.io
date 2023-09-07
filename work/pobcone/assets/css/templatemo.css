@@ -1,0 +1,214 @@
+/*
+
+---------------------------------------------
+Table of contents
+------------------------------------------------
+1. Typography
+2. Main Nav
+3. Home
+4. About
+5. Work
+6. Single Work
+7. Pricing
+8. Contact
+--------------------------------------------- */
+
+html {font-family: 'Open Sans', sans-serif;}
+/* Typography */
+p, a {font-weight: 400;}
+.h2 {font-size: 40px;}
+.h3 {font-size: 28px;}
+.light-300 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+}
+.regular-400 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400;
+}
+.semi-bold-600 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 600;
+}
+.typo-space-line::after,
+.typo-space-line-center::after {
+  content: "";
+  width: 150px;
+  display:block;
+  position: absolute;
+  border-bottom:  5px solid var(--bs-quaternary);
+  padding-top: .5em;
+}
+.typo-space-line-center::after {
+  left: 50%;
+  margin-left: -75px;
+}
+
+body { padding-top: 40px; }
+
+/* Main Nav */
+#main_nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+#main_nav .nav-item .nav-link:hover {color: #fff;}
+
+  /* Nav logo */
+  #main_nav .navbar-brand img {
+    height: 35px;
+  }
+
+  .navbar-brand {
+    padding: 0;
+  }
+
+  /* Navigation links */
+  .nav-item .btn {
+    border: none;
+  }
+
+/* Home */
+#index_banner {
+  background-position: center center; background-size: cover;
+  height: 100%;
+  min-height: 55vh;
+  width: 100%;
+}
+#index_banner .carousel-item {
+  min-height: 55vh;
+}
+#index_banner .carousel-control-prev i,
+#index_banner .carousel-control-next i {
+  color: black !important;
+  text-decoration: none;
+  font-size: 4em;
+}
+#index_banner .carousel-inner {
+  height: 45vh;
+}
+#index_banner .carousel-indicators li,
+#index_banner .carousel-indicators.active {
+  background-color: var(--bs-quaternary) !important;
+}
+
+/* Templates */
+.service-wrapper .service-footer {
+  max-width: 720px;
+}
+.service-work.card {
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+.service-work .service-work-vertical {
+	background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(47,46,65,1) 0%, rgba(255,255,255,0) 33.33%, rgba(255,102,102,.9) 66.66%);
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: .25s;
+}
+.service-work .service-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: .25s;
+}
+.service-work .service-work-vertical:hover * {
+  color: #000;
+  border-color: #000;
+  transition: .25s;
+}
+
+.service-work-vertical span.btn {
+  display: none;
+}
+
+.service-work-vertical:hover span.btn{
+  display: block;
+}
+
+
+.service-work-vertical:hover .card-text {
+  transition: 0s;
+  font-size: 1.1em;
+}
+
+/* IT Solutions */
+.recent-work.card{
+  border-radius: 10px !important;
+}
+.recent-work .recent-work-vertical {
+	background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,102,102,0) 33.333%, rgba(47,46,65,.8) 66.666%);
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: .25s;
+  cursor: pointer;
+}
+.recent-work .recent-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: .25s;
+}
+
+.recent-work .recent-work-vertical:hover * {
+  color: white;
+  transition: .25s;
+}
+
+.recent-work .recent-work-vertical span.btn {
+  display: none;
+  color: black;
+}
+
+.recent-work .recent-work-vertical:hover h3.card-title {
+  top: 50%;
+  margin-top: -2em;
+  position: absolute;
+}
+
+.recent-work .recent-work-vertical:hover span.btn {
+  display: inline-block;
+}
+
+.recent-work .recent-work-vertical span.btn:hover {
+  color: white;
+}
+
+/* 4 steps  */
+.pobcone-steps li {
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+/* Pricing */
+.pricing-list {
+  margin-bottom: 1px;
+}
+.pricing-table {
+  max-width: 350px;
+  margin: auto;
+}
+.pricing-table,
+.pricing-horizontal {
+  border-radius: 15px !important;
+}
+
+/* Contact */
+#floatingtextarea {
+  height: 150px
+}
+
+/* Footer */
+footer a.text-light:hover {
+  color: var(--bs-quaternary) !important;
+  transition-duration: 0.15s;
+}
+
+/* CUSTOM CSS */
+.bg-quinary {
+  background-color: var(--bs-quinary);
+}
+
+.pob-logo {
+  height: 25px;
+}
