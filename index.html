@@ -13,11 +13,11 @@
     <header>
         <nav>
             <ul>
-                <a href="https://github.com/jk-i"><li>
+                <a href="https://github.com/jk-i" target="_blank"><li>
                     <img class="icon" src="./img/github.svg">
                     <span class="full-nav">github.com/jk-i</span>
                 </li></a>
-                <a href="mailto:jki.devs@gmail.com?subject=[jk.] "><li>
+                <a href="#chat"><li>
                     <img class="icon" src="./img/mail.svg">
                     <span class="full-nav">jki.devs@gmail.com</span>
                 </li></a>
@@ -30,15 +30,15 @@
         <section id="work" class="container">
             <a href="./work/radiant-salon/index.html" target="_blank" class="p-1">
                 <h2>Radiant Salon</h2>
-                <p class="work-txt">HTML, CSS</p>
+                <p class="work-txt">Fully responsive website for a classy salon.</p>
             </a>
             <a href="./work/pobcone/index.html" target="_blank" class="p-2">
                 <h2>Pobcone</h2>
-                <p class="work-txt">BootStrap, HTML, CSS</p>
+                <p class="work-txt">All-in-one web development, app building, and IT solutions service with optional domain and hosting setup.</p>
             </a>
             <a href="https://ny.spacastleusa.com/" target="_blank" class="p-3">
                 <h2>Spa Castle</h2>
-                <p class="work-txt">Wordpress, CSS</p>
+                <p class="work-txt">A website to showcase the facility, keep up to date with offers, news, and an online shop.</p>
             </a>
         </section>
     
@@ -51,10 +51,10 @@
                         <img class="icon" src="./img/JavaScript.svg">
                         <img class="icon" src="./img/bootstrap.svg">
                         <ul class="links">
-                            <a href="" download><li>HTML</li></a>
-                            <a href=""><li>CSS</li></a>
-                            <a href=""><li>JavaScript</li></a>
-                            <a href=""><li>BootStrap</li></a>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>BootStrap</li>
                         </ul>
                     </div>
                 </div>
@@ -68,6 +68,32 @@
             </div>
         </section>
     </main>
+
+    <section id="chat">
+        <form id="contact-form" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvojrdwz" method="post">
+            <fieldset id="msg-form">
+                <div>
+                    <a href="mailto:jki.devs@gmail.com?subject=[jk.] " target="_blank"><h2>E-mail me at jki.devs@gmail.com</h2></a>
+                    <div class="form-inline">
+                        <div class="label-form">
+                            <label for="form-name">Name</label>
+                            <input type="text" name="name" id="form-name" placeholder="Nice to meet you." required>
+                        </div>
+                        <div class="label-form">
+                            <label for="form-email">Email</label>
+                            <input type="email" name="_replyto" id="form-email" placeholder="you@email.com" required>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="form-message">Message</label>
+                    <textarea rows="5" name="message" id="form-message" placeholder="Hi jk. love the site!" required></textarea>
+                    <input type="hidden" name="_subject" id="email-subject" value="Message for jk.">
+                    <input type="submit" value="Send message!" id="form-btn">
+                </div>
+            </fieldset>
+        </form>
+    </section>
 
     <footer>&copy; 2023 jk.</footer> 
 </body>

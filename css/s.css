@@ -13,7 +13,7 @@
     --clr-gray: gray;
     /* font sizes */
     --fs-h1: 1.2rem;
-    --fs-h2: 1rem;
+    --fs-h2: 1.1rem;
     --fs-body: 1rem;
     --fs-logo: 2rem;
     /* font weight */
@@ -101,6 +101,13 @@ img.icon {
   height: 2em;
 }
 
+/* form style */
+#msg-form label {
+  color: lightgrey;
+  padding-bottom: .3em;
+  padding-right: .2em;
+}
+
 /* Layout */
 .content {
   margin: auto;
@@ -151,6 +158,7 @@ img.icon {
 p.work-txt {
   opacity: 0;
   transition: all 0.1s linear;
+  padding: 0 1em;
 }
 
 #work [class ^="p-"]:hover p.work-txt {
@@ -174,23 +182,48 @@ p.work-txt {
   list-style-type: none;
 }
 
-#who .links img{
-    vertical-align: middle;
-    width: auto;
-}
-
-#who .links li:nth-child(2) {
-  padding: 50px 0;
-}
-
 .col {
   margin: auto;
 }
 
 .col:first-child {
-  padding-bottom: 25px;
+  padding-bottom: 2em;
 }
 
+/* Contact */
+#chat {
+  padding: 4em 0;
+}
+
+#msg-form {
+  border-style: none;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#form-message {
+  width: 100%;
+}
+
+#msg-form > div:first-child {
+  padding-bottom: .5em;
+}
+
+.label-form {
+  display: flex;
+}
+
+.label-form input {
+  width: 100%;
+  flex: auto;
+}
+
+#form-btn {
+  background-color: black;
+  color: white;
+  padding: .7em;
+  border: none;
+}
 
 /* Footer */
 footer {
@@ -206,6 +239,14 @@ footer {
   span.full-nav {
     display: inline-block;
     padding-left: .5em;
+  }
+
+  .form-inline {
+    display: flex;
+  }
+
+  #msg-form h2 {
+    padding-bottom: 1em;
   }
 }
 
@@ -265,6 +306,33 @@ footer {
     padding: 10%;
     line-height: 1.5em;
   }
+
+  #chat {
+    padding: 4em 2em;
+  }
+
+  #contact-form fieldset {
+    display: flex;
+  }
+
+  #msg-form > div {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+  }
+
+  #msg-form > div:last-child {
+    padding-left: 1em;
+    flex: auto;
+  }
+
+  .label-form {
+    display: flex;
+  }
+
+  .form-inline {
+    display: block;
+  }
 }
 
 @media all and (min-width: 900px) { 
@@ -285,5 +353,13 @@ footer {
   display: flex;
   margin: auto;
   padding: 0;
-}
+ }
+
+  #msg-form > div:first-child {
+    flex: .5;
+  }
+
+  #chat {
+    padding: 4em 4em;
+  }
 }
