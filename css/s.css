@@ -188,7 +188,11 @@ p.work-txt {
   padding: 0 1em;
 }
 
-#work [class ^="p-"]:hover p.work-txt {
+#work button {
+  opacity: 0;
+}
+
+#work [class ^="p-"]:hover p.work-txt, #work [class ^="p-"]:hover button {
   opacity: 1;
 }
 
@@ -283,6 +287,10 @@ footer {
 
   .form-inline {
     display: flex;
+  }
+
+  #work button {
+    opacity: 1;
   }
 }
 
