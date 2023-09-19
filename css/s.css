@@ -164,7 +164,7 @@ button {
 }
 
 #work .p-2 {
-  background: radial-gradient(circle, rgba(255, 255, 0, 1) 0%, rgba(255, 255, 0, 0.5) 100%), top url('../img/pobcone.jpg');
+  background: radial-gradient(circle, rgba(255, 255, 0, 1) 0%, rgba(255, 255, 0, 0.5) 100%), top url('../img/popcone.jpg');
   background-color: var(--clr-accent-2);
 }
 
